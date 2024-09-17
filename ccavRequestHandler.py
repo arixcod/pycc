@@ -40,7 +40,6 @@ def ccavResponseHandler():
     plainText = res(request.form['encResp'])
     return plainText
 
-
 @app.route('/ccavRequestHandler', methods=['POST'])
 def login():
     if request.is_json:
@@ -49,8 +48,8 @@ def login():
         p_order_id = data['order_id']
         p_currency = "INR"
         p_amount = data['amount']
-        p_redirect_url = "http://arixpower.com/success"  # Updated URL
-        p_cancel_url = "http://arixpower.com/cancel"    # Updated URL
+        p_redirect_url = "http://arixpower.com/ccavResponseHandler"  # Updated URL
+        p_cancel_url = "http://arixpower.com/ccavResponseHandler"    # Updated URL
 
         p_language = 'EN'
         p_billing_name = data.get('billing_name', "")

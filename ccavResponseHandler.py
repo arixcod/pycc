@@ -3,6 +3,13 @@
 from ccavutil import encrypt,decrypt
 from string import Template
 
+
+
+
+
+
+
+
 def res(encResp):
 	'''
 	Please put in the 32 bit alphanumeric key in quotes provided by CCAvenues.
